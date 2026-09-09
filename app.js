@@ -1,7 +1,9 @@
 /**
- * Interacciones y Lógica Frontend - Feria Tecnológica UFIDeT 2026
- * I.E.S. N° 6036 - Salta, Argentina
+ * Configuración de Integración con Google Sheets
+ * Hoja: https://docs.google.com/spreadsheets/d/1_3lhS2Dih1qiTZa8vEPcBmGLVFbiyiUhDWEZKdDUSKI/edit
+ * Pestañas automáticas: "Expositores", "Jurados", "Visitantes"
  */
+const GOOGLE_SHEETS_SCRIPT_URL = ""; // Pega aquí la URL de la Web App de Apps Script (ej: https://script.google.com/macros/s/.../exec)
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -254,18 +256,73 @@ function initRegistrationForm() {
     });
 
     // Envío del Formulario
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        const submitBtn = form.querySelector('.btn-submit');
+        const originalBtnHtml = submitBtn.innerHTML;
+
         const name = document.getElementById('inputName').value.trim();
+        const dni = document.getElementById('inputDni').value.trim();
+        const email = document.getElementById('inputEmail').value.trim();
+        const phone = document.getElementById('inputPhone').value.trim();
         const role = roleHiddenInput.value;
         const institution = document.getElementById('inputInstitution').value.trim();
-        const project = projectInput.value.trim();
+        const project = (projectInput && projectInput.value) ? projectInput.value.trim() : '';
+        const field = document.getElementById('selectField').value;
+        const shift = document.getElementById('selectShift').value;
+        const notes = document.getElementById('inputTextarea').value.trim();
 
         // Generar Código de Acreditación único
         const randomHex = Math.floor(1000 + Math.random() * 9000);
         const rolePrefix = role === 'expositor' ? 'EXP' : (role === 'jurado' ? 'JUR' : 'VIS');
         const accreditationCode = `UFIDET-${rolePrefix}-2026-${randomHex}`;
+        const timestamp = new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Salta' });
+
+        // Preparar payload para Google Sheets
+        const payload = {
+            timestamp: timestamp,
+            code: accreditationCode,
+            name: name,
+            dni: dni,
+            email: email,
+            phone: phone,
+            role: role,
+            institution: institution,
+            project: project,
+            field: field,
+            shift: shift,
+            notes: notes
+        };
+
+        // Estado visual de envío
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Guardando acreditación en Google Sheets...</span>';
+
+        // Guardado local de respaldo (Offline fallback)
+        try {
+            const saved = JSON.parse(localStorage.getItem('ufidet_inscripciones_2026') || '[]');
+            saved.push(payload);
+            localStorage.setItem('ufidet_inscripciones_2026', JSON.stringify(saved));
+        } catch (storageErr) {
+            console.warn('Almacenamiento local no disponible:', storageErr);
+        }
+
+        // Envío asíncrono a Google Apps Script (si está configurada la URL)
+        if (GOOGLE_SHEETS_SCRIPT_URL && GOOGLE_SHEETS_SCRIPT_URL.trim() !== '') {
+            try {
+                await fetch(GOOGLE_SHEETS_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+            } catch (netErr) {
+                console.warn('No se pudo contactar el endpoint de Google Sheets:', netErr);
+            }
+        }
 
         // Mapeo amigable de rol
         const roleNameMap = {
@@ -285,7 +342,9 @@ function initRegistrationForm() {
         const qrPayload = encodeURIComponent(`https://hugoaguilaufidet.github.io/feriaufidet?code=${accreditationCode}&user=${name}`);
         qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrPayload}`;
 
-        // Animación de aparición
+        // Restaurar botón y mostrar credencial
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
         form.style.display = 'none';
         resultBox.style.display = 'block';
         resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
