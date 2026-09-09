@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Feria Tecnológica UFIDeT - Exposición de Proyectos Integradores basados en Aprendizaje Basado en Proyectos (ABP). I.E.S. N° 6036, Salta.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Feria Tecnológica UFIDeT 2026 | I.E.S. N° 6036 Salta</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos Independiente -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+       HEADER SUPERIOR UNIFICADO / NAVBAR (COHERENCIA INSTITUCIONAL WEB3)
+       ========================================================================== -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Ir al inicio de la Feria UFIDeT">
+                <img src="logo.png" alt="Escudo Oficial U.F.I.De.T." class="nav-logo">
+                <div class="brand-text">
+                    <span class="brand-title">I.E.S. 6036</span>
+                    <span class="brand-sub">U.F.I.De.T. Salta</span>
+                </div>
+            </a>
+
+            <nav class="nav-tabs" aria-label="Navegación principal de la Feria">
+                <a href="#hero" class="nav-tab active">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Inicio
+                </a>
+                <a href="#abp" class="nav-tab">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Modelo ABP
+                </a>
+                <a href="#stands" class="nav-tab">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                    Cátedras & Stands
+                </a>
+                <a href="#cronograma" class="nav-tab">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Agenda
+                </a>
+                <a href="#registro" class="nav-tab">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Registro
+                </a>
+            </nav>
+
+            <a href="#registro" class="nav-cta">
+                <span>Participar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       ELEMENTOS 3D ANIMADOS EN SEGUNDO PLANO
+       ========================================================================== -->
+    <img src="wrench.png" alt="Herramienta Mecánica 3D" class="bg-3d-element wrench-3d" loading="lazy">
+    <img src="multimeter.png" alt="Multímetro e Instrumentación 3D" class="bg-3d-element multimeter-3d" loading="lazy">
+    <img src="radiation.png" alt="Símbolo Radiológico 3D" class="bg-3d-element radiation-3d" loading="lazy">
+    <img src="ventilator.png" alt="Ventilación Mecánica 3D" class="bg-3d-element ventilator-3d" loading="lazy">
+
+    <!-- ==========================================================================
+       CONTENIDO PRINCIPAL
+       ========================================================================== -->
+    <div class="main-wrapper">
+        <main class="container">
+
+            <!-- 1. HEADER HERO IMPACTANTE -->
+            <header id="hero" class="hero-home">
+                <div class="hero-meta-badge">
+                    <span class="pulse-dot"></span>
+                    <span>U.F.I.De.T. Salta · I.E.S. N° 6036 · Jornada Anual 2026</span>
+                </div>
+
+                <h1 class="hero-title">Feria Tecnológica UFIDeT</h1>
+
+                <p class="hero-subtitle">
+                    Exposición de Proyectos integradores basados en 
+                    <span class="abp-highlight">Aprendizaje Basado en Proyectos (ABP)</span>. 
+                    Innovación técnica, prototipado industrial y respuesta concreta a los desafíos del sector socioproductivo de Salta.
+                </p>
+
+                <!-- Datos Clave de Fecha, Sede y Modalidad -->
+                <div class="hero-event-info">
+                    <div class="info-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        <span>Jueves 22 de Octubre, 2026</span>
+                    </div>
+                    <div class="info-separator"></div>
+                    <div class="info-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>08:30 a 18:30 hs</span>
+                    </div>
+                    <div class="info-separator"></div>
+                    <div class="info-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Campus Tecnológico U.F.I.De.T. (Parque Industrial / Salta Capital)</span>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción Principal (CTA) -->
+                <div class="hero-cta-group">
+                    <a href="#stands" class="btn-primary">
+                        <span>Explorar Proyectos y Stands</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </a>
+                    <a href="#cronograma" class="btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        <span>Consultar la Agenda</span>
+                    </a>
+                    <a href="#registro" class="btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                        <span>Inscripción y Acreditación</span>
+                    </a>
+                </div>
+
+                <!-- Métricas Destacadas del Evento -->
+                <div class="hero-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">+40</div>
+                        <div class="stat-label">Proyectos ABP Expuestos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Especialidades Integradas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Prototipos Funcionales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Real</div>
+                        <div class="stat-label">Impacto Socioproductivo</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 2. ENFOQUE PEDAGÓGICO (SECCIÓN ABP) -->
+            <section id="abp" class="section-block">
+                <div class="section-header">
+                    <span class="section-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+                        Pedagogía e Innovación Técnica
+                    </span>
+                    <h2 class="section-title">El Aprendizaje Basado en Proyectos (ABP)</h2>
+                    <p class="section-subtitle">
+                        Transformamos el aula en un laboratorio de ingeniería aplicada donde los estudiantes son protagonistas en la resolución de problemas reales.
+                    </p>
+                </div>
+
+                <!-- Manifiesto ABP UFIDeT -->
+                <div class="abp-manifesto-card">
+                    <p class="manifesto-lead">
+                        En el Instituto de Educación Superior N° 6036 (U.F.I.De.T.), el Aprendizaje Basado en Proyectos no es solo una estrategia pedagógica, sino el eje vertebral que articula la formación técnica superior con las demandas del sector productivo y sanitario de Salta.
+                    </p>
+                    <p class="manifesto-body">
+                        Los estudiantes parten de una necesidad socioproductiva auténtica: optimizar un sistema de inyección diésel, garantizar la seguridad eléctrica de un área de cuidados intensivos, telemedir variables agroindustriales o crear software de trazabilidad médica. A lo largo del ciclo lectivo, combinan cálculo y fundamentos teóricos rigurosos con el diseño en software CAD/CAM, fabricación de circuitos impresos, maquinado de piezas mecánicas y calibración exhaustiva con instrumental patrón.
+                    </p>
+
+                    <!-- Pilares ABP -->
+                    <div class="manifesto-pillars-grid">
+                        <div class="pillar-item">
+                            <div class="pillar-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            </div>
+                            <h3 class="pillar-title">Demanda Socioproductiva</h3>
+                            <p class="pillar-desc">Vinculación con talleres mecánicos, clínicas, hospitales y fábricas locales para resolver problemas reales del territorio.</p>
+                        </div>
+
+                        <div class="pillar-item bio">
+                            <div class="pillar-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <h3 class="pillar-title">Prototipos e Instrumentación</h3>
+                            <p class="pillar-desc">Construcción física y funcional con verificación continua mediante osciloscopios, analizadores de ventilación y metrología certificada.</p>
+                        </div>
+
+                        <div class="pillar-item electro">
+                            <div class="pillar-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <h3 class="pillar-title">Evaluación por Rúbricas</h3>
+                            <p class="pillar-desc">Defensa pública frente a un comité evaluador de docentes, egresados e ingenieros del campo laboral formal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- El Ciclo de Desarrollo ABP en 4 Etapas -->
+                <div class="abp-lifecycle-container">
+                    <h3 class="lifecycle-title">Ciclo Metodológico del Proyecto en UFIDeT</h3>
+                    <div class="lifecycle-grid">
+                        <div class="lifecycle-card">
+                            <div class="lifecycle-step-num">01</div>
+                            <h4>Detección del Problema</h4>
+                            <p>Análisis de necesidades en terreno, relevamiento con actores productivos y formulación de la hipótesis tecnológica a solucionar.</p>
+                        </div>
+
+                        <div class="lifecycle-card">
+                            <div class="lifecycle-step-num">02</div>
+                            <h4>Ingeniería y Diseño</h4>
+                            <p>Cálculo de componentes, esquemáticos en KiCAD/SolidWorks, simulación de señales y adopción de normativas (ISO/IEC).</p>
+                        </div>
+
+                        <div class="lifecycle-card">
+                            <div class="lifecycle-step-num">03</div>
+                            <h4>Fabricación de Prototipo</h4>
+                            <p>Tornería, mecanizado, soldadura estructural, ruteo de PCBs, programación de firmware en C++/Python y ensamble físico.</p>
+                        </div>
+
+                        <div class="lifecycle-card">
+                            <div class="lifecycle-step-num">04</div>
+                            <h4>Validación Metrológica</h4>
+                            <p>Pruebas de esfuerzo, medición con instrumental patrón, contraste de curvas y transferencia del producto al sector socioproductivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. GRID DE CATEGORÍAS Y STANDS DE LAS CÁTEDRAS -->
+            <section id="stands" class="section-block">
+                <div class="section-header">
+                    <span class="section-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/></svg>
+                        Exposiciones de Cátedras
+                    </span>
+                    <h2 class="section-title">Categorías y Stands Interactivos</h2>
+                    <p class="section-subtitle">
+                        Conocé los proyectos desarrollados por los alumnos en cada especialidad. Hacé clic en cada stand para ver la ficha técnica completa y el instrumental utilizado.
+                    </p>
+                </div>
+
+                <!-- Filtros Interactivos -->
+                <div class="stands-filters" role="tablist" aria-label="Filtrar stands por cátedra">
+                    <button class="filter-btn active" data-category="all">
+                        <span>Todos los Stands (4)</span>
+                    </button>
+                    <button class="filter-btn" data-category="auto">
+                        <span>🚗 Autotrónica</span>
+                    </button>
+                    <button class="filter-btn" data-category="bio">
+                        <span>🩺 Biomedicina</span>
+                    </button>
+                    <button class="filter-btn" data-category="electro">
+                        <span>⚡ Electrónica</span>
+                    </button>
+                    <button class="filter-btn" data-category="software">
+                        <span>💻 Software e Informática</span>
+                    </button>
+                </div>
+
+                <!-- Grid de Stands -->
+                <div class="stands-grid">
+
+                    <!-- STAND 1: AUTOTRÓNICA -->
+                    <article class="stand-card card-auto" data-category="auto">
+                        <div class="stand-header-row">
+                            <span class="stand-tag tag-auto">Cátedra: TMA & Autotrónica</span>
+                            <span class="stand-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Nave Taller Central · Stand A1-A4
+                            </span>
+                        </div>
+
+                        <h3 class="stand-title">Autotrónica y Sistemas Mecánicos Vehiculares</h3>
+
+                        <p class="stand-desc">
+                            Enfoque integral que fusiona la mecánica de precisión del Taller de Máquinas (TMA) con la electrónica de control vehicular moderna. Los estudiantes diseñan y operan bancos de diagnóstico para inyección, encendido electrónico, sensores automotrices y sistemas de electromovilidad.
+                        </p>
+
+                        <div class="stand-focus-box">
+                            <div class="focus-box-title">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/></svg>
+                                Enfoque Técnico y Metrológico:
+                            </div>
+                            <ul class="focus-list">
+                                <li><strong>Prototipos:</strong> Bancos de prueba para inyectores piezoeléctricos y simulador de sensores CKP/CMP.</li>
+                                <li><strong>Mediciones:</strong> Adquisición de señales en vivo mediante osciloscopio automotriz de 4 canales.</li>
+                                <li><strong>Instrumentación:</strong> Escáneres OBD-II con enlace CAN-bus, vacuómetros y pinzas amperimétricas para compresión relativa.</li>
+                            </ul>
+                        </div>
+
+                        <div class="stand-projects-preview">
+                            <span class="project-chip">🔬 Banco Automatizado de Inyectores</span>
+                            <span class="project-chip">⚡ Simulador Señales Sensores Hall</span>
+                            <span class="project-chip">⚙️ Tornería Mecánica de Precisión</span>
+                        </div>
+
+                        <button class="stand-action-btn" data-open-modal="auto">
+                            <span>Ver Ficha Técnica y Rúbrica ABP</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                    </article>
+
+                    <!-- STAND 2: BIOMEDICINA -->
+                    <article class="stand-card card-bio" data-category="bio">
+                        <div class="stand-header-row">
+                            <span class="stand-tag tag-bio">Cátedras: IYM · EAV · IRI</span>
+                            <span class="stand-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Laboratorio de Electromedicina · Stand B1-B5
+                            </span>
+                        </div>
+
+                        <h3 class="stand-title">Biomedicina: Soporte Vital y Radioprotección</h3>
+
+                        <p class="stand-desc">
+                            Integración profunda de Instrumentos y Mediciones (IYM), Equipos de Asistencia Ventilatoria (EAV) e Instalaciones Radiactivas e Imágenes (IRI). Los alumnos garantizan la seguridad del paciente mediante el mantenimiento preventivo, control metrológico y certificación de equipamiento hospitalario crítico.
+                        </p>
+
+                        <div class="stand-focus-box">
+                            <div class="focus-box-title">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/></svg>
+                                Enfoque Técnico y Metrológico:
+                            </div>
+                            <ul class="focus-list">
+                                <li><strong>Prototipos:</strong> Generadores de señales fisiológicas (ECG/SpO2) y simulador neumático de distensibilidad pulmonar.</li>
+                                <li><strong>Mediciones:</strong> Análisis de fugas eléctricas (IEC 60601-1), curvas de presión/volumen y dosimetría de radiación X.</li>
+                                <li><strong>Instrumentación:</strong> Analizadores Fluke ProSim, pulmones de prueba artificiales, manómetros diferenciales y dosímetros Geiger.</li>
+                            </ul>
+                        </div>
+
+                        <div class="stand-projects-preview">
+                            <span class="project-chip">🫁 Calibrador de Respiradores UTI</span>
+                            <span class="project-chip">💓 Simulador ECG Microcontrolado</span>
+                            <span class="project-chip">🛡️ Seguridad Eléctrica de Pacientes</span>
+                        </div>
+
+                        <button class="stand-action-btn" data-open-modal="bio">
+                            <span>Ver Ficha Técnica y Rúbrica ABP</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                    </article>
+
+                    <!-- STAND 3: ELECTRÓNICA -->
+                    <article class="stand-card card-electro" data-category="electro">
+                        <div class="stand-header-row">
+                            <span class="stand-tag tag-electro">Cátedra: Sistemas Embebidos & Control</span>
+                            <span class="stand-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Sala de Prototipado Electrónico · Stand C1-C3
+                            </span>
+                        </div>
+
+                        <h3 class="stand-title">Electrónica Industrial, IoT y Sistemas Embebidos</h3>
+
+                        <p class="stand-desc">
+                            Desarrollo de hardware a medida para telemetría y control automatizado de procesos productivos. Los proyectos abarcan desde el acondicionamiento analógico de sensores de alta impedancia hasta el diseño y ruteo de placas de circuito impreso (PCB) multicapa y comunicación inalámbrica de largo alcance.
+                        </p>
+
+                        <div class="stand-focus-box">
+                            <div class="focus-box-title">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/></svg>
+                                Enfoque Técnico y Metrológico:
+                            </div>
+                            <ul class="focus-list">
+                                <li><strong>Prototipos:</strong> Nodos LoRaWAN para agroclimatología y fuentes reguladas conmutadas con protección contra sobretensión.</li>
+                                <li><strong>Mediciones:</strong> Detección de transitorios y ruido electromagnético en buses I2C/SPI y espectro de rizado de potencia.</li>
+                                <li><strong>Instrumentación:</strong> Analizadores lógicos digitales de 16 canales, multímetros True-RMS de 6½ dígitos y estaciones de soldadura SMD.</li>
+                            </ul>
+                        </div>
+
+                        <div class="stand-projects-preview">
+                            <span class="project-chip">📡 Nodos LoRaWAN de Telemetría</span>
+                            <span class="project-chip">🔌 Fuentes Conmutadas de Precisión</span>
+                            <span class="project-chip">📟 Ruteo de PCBs en KiCad</span>
+                        </div>
+
+                        <button class="stand-action-btn" data-open-modal="electro">
+                            <span>Ver Ficha Técnica y Rúbrica ABP</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                    </article>
+
+                    <!-- STAND 4: SOFTWARE E INFORMÁTICA -->
+                    <article class="stand-card card-software" data-category="software">
+                        <div class="stand-header-row">
+                            <span class="stand-tag tag-software">Cátedra: Desarrollo de Sistemas</span>
+                            <span class="stand-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Espacio Coworking & Auditorio · Stand D1-D4
+                            </span>
+                        </div>
+
+                        <h3 class="stand-title">Software, Analítica de Datos y Teleasistencia</h3>
+
+                        <p class="stand-desc">
+                            Desarrollo de aplicaciones multiplataforma y plataformas en la nube que conectan el mundo físico con el digital. Los estudiantes crean soluciones de software para la recolección en tiempo real de datos biomédicos, diagnóstico vehicular asistido y gestión hospitalaria con altos estándares de seguridad y usabilidad.
+                        </p>
+
+                        <div class="stand-focus-box">
+                            <div class="focus-box-title">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="m17 5-5-3-5 3"/><path d="m17 19-5 3-5-3"/></svg>
+                                Enfoque Técnico y Metrológico:
+                            </div>
+                            <ul class="focus-list">
+                                <li><strong>Prototipos:</strong> Tablero Web de monitoreo en tiempo real con WebSockets/MQTT y servidor móvil de historiales clínicos.</li>
+                                <li><strong>Mediciones:</strong> Benchmarking de latencia de red, tiempo de respuesta en milisegundos y pruebas de estrés con 100+ clientes simultáneos.</li>
+                                <li><strong>Instrumentación:</strong> Contenedores Docker, brokers MQTT Mosquitto, analizadores de tráfico Wireshark y suites de testing unitario.</li>
+                            </ul>
+                        </div>
+
+                        <div class="stand-projects-preview">
+                            <span class="project-chip">🌐 Dashboard Web de Telemetría</span>
+                            <span class="project-chip">📱 App de Mantenimiento Biomédico</span>
+                            <span class="project-chip">🔐 Arquitectura Segura con MQTT</span>
+                        </div>
+
+                        <button class="stand-action-btn" data-open-modal="software">
+                            <span>Ver Ficha Técnica y Rúbrica ABP</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- 4. CRONOGRAMA / AGENDA DE LA JORNADA -->
+            <section id="cronograma" class="section-block">
+                <div class="section-header">
+                    <span class="section-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        Itinerario Oficial
+                    </span>
+                    <h2 class="section-title">Cronograma y Agenda de la Jornada</h2>
+                    <p class="section-subtitle">
+                        Horarios organizados para acreditaciones, apertura institucional, rondas de evaluación por jurado docente y demostraciones técnicas en vivo.
+                    </p>
+                </div>
+
+                <!-- Selectores de Turno -->
+                <div class="schedule-controls" role="group" aria-label="Filtrar cronograma">
+                    <button class="schedule-btn active" data-shift="all">Toda la Jornada (08:30 - 18:30)</button>
+                    <button class="schedule-btn" data-shift="manana">Turno Mañana (08:30 - 13:00)</button>
+                    <button class="schedule-btn" data-shift="tarde">Turno Tarde (14:00 - 18:30)</button>
+                </div>
+
+                <!-- Línea de Tiempo Interactiva -->
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+                    <ul class="timeline-list">
+
+                        <!-- Hito 1 -->
+                        <li class="timeline-card" data-shift="manana">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">08:30</div>
+                                <div class="timeline-shift">Mañana</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge">Acreditación</span>
+                                    <span class="event-location">Hall de Entrada Principal</span>
+                                </div>
+                                <h3 class="timeline-event-title">Acreditación y Entrega de Credenciales</h3>
+                                <p class="timeline-event-desc">
+                                    Recepción de estudiantes expositores, instalación final de prototipos en cada stand, entrega de carpetas evaluadoras al jurado y bienvenida de visitantes.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Hito 2 -->
+                        <li class="timeline-card" data-shift="manana">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">09:15</div>
+                                <div class="timeline-shift">Mañana</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge type-inauguracion">Acto Inaugural</span>
+                                    <span class="event-location">Auditorio Central UFIDeT</span>
+                                </div>
+                                <h3 class="timeline-event-title">Apertura Oficial de la Feria Tecnológica</h3>
+                                <p class="timeline-event-desc">
+                                    Palabras de bienvenida de las autoridades del I.E.S. N° 6036, presentación de los objetivos pedagógicos del modelo ABP y apertura formal de la muestra técnica.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Hito 3 -->
+                        <li class="timeline-card" data-shift="manana">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">09:45</div>
+                                <div class="timeline-shift">Mañana</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge type-demo">Demostración en Vivo</span>
+                                    <span class="event-location">Nave Central & Laboratorios</span>
+                                </div>
+                                <h3 class="timeline-event-title">Inicio de Recorrido: Autotrónica & Biomedicina</h3>
+                                <p class="timeline-event-desc">
+                                    Pruebas en tiempo real de bancos de inyección automotriz y ensayos metrológicos en monitores multiparamétricos y respiradores artificiales con instrumental Fluke.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Hito 4 -->
+                        <li class="timeline-card" data-shift="manana">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">11:30</div>
+                                <div class="timeline-shift">Mañana</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge type-evaluacion">Ronda Evaluadora 1</span>
+                                    <span class="event-location">Todos los Stands</span>
+                                </div>
+                                <h3 class="timeline-event-title">Primera Ronda de Evaluación de Jurados</h3>
+                                <p class="timeline-event-desc">
+                                    Defensa oral de proyectos por parte de los alumnos frente al comité de docentes técnicos e invitados del sector socioproductivo. Aplicación de rúbricas ABP.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Hito 5 -->
+                        <li class="timeline-card" data-shift="tarde">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">13:00</div>
+                                <div class="timeline-shift">Tarde</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge">Pausa Técnica</span>
+                                    <span class="event-location">Comedor Institucional</span>
+                                </div>
+                                <h3 class="timeline-event-title">Receso & Espacio de Networking</h3>
+                                <p class="timeline-event-desc">
+                                    Intercambio entre estudiantes, egresados, empresas del parque industrial y profesionales del sector salud y automotriz.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Hito 6 -->
+                        <li class="timeline-card" data-shift="tarde">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">14:15</div>
+                                <div class="timeline-shift">Tarde</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge type-demo">Demostración en Vivo</span>
+                                    <span class="event-location">Sala de Prototipado & Software</span>
+                                </div>
+                                <h3 class="timeline-event-title">Demostraciones: IoT, Telemetría y Plataformas Web</h3>
+                                <p class="timeline-event-desc">
+                                    Exposición de comunicación LoRaWAN a larga distancia, microservicios en la nube y presentación de interfaces HMI interactivas con sensores en hardware vivo.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Hito 7 -->
+                        <li class="timeline-card" data-shift="tarde">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">16:00</div>
+                                <div class="timeline-shift">Tarde</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge type-evaluacion">Ronda Evaluadora 2</span>
+                                    <span class="event-location">Stands de Cátedras</span>
+                                </div>
+                                <h3 class="timeline-event-title">Segunda Ronda de Calificación y Conclusiones</h3>
+                                <p class="timeline-event-desc">
+                                    Revisión final de carpetas de campo, bitácoras de diseño y deliberación del cuerpo docente para las menciones de honor e impacto socioproductivo.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Hito 8 -->
+                        <li class="timeline-card" data-shift="tarde">
+                            <div class="timeline-time-box">
+                                <div class="timeline-time">17:45</div>
+                                <div class="timeline-shift">Tarde</div>
+                            </div>
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content-card">
+                                <div class="timeline-tag-row">
+                                    <span class="event-type-badge type-inauguracion">Premiación y Cierre</span>
+                                    <span class="event-location">Auditorio Central</span>
+                                </div>
+                                <h3 class="timeline-event-title">Acto de Cierre, Distinciones y Certificados</h3>
+                                <p class="timeline-event-desc">
+                                    Entrega de reconocimientos a los proyectos destacados por su impacto pedagógico y aporte a la comunidad. Palabras de clausura y brindis institucional.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. FORMULARIO DE CONTACTO / REGISTRO -->
+            <section id="registro" class="section-block">
+                <div class="section-header">
+                    <span class="section-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        Acreditación Digital
+                    </span>
+                    <h2 class="section-title">Registro y Participación</h2>
+                    <p class="section-subtitle">
+                        Espacio para registro de estudiantes expositores, jurados evaluadores y visitantes de la comunidad socioproductiva. Al registrarte recibirás tu credencial digital.
+                    </p>
+                </div>
+
+                <div class="register-container">
+
+                    <!-- Selector de Roles -->
+                    <div class="role-tabs" role="tablist">
+                        <button type="button" class="role-tab-btn active" data-role="expositor">
+                            <span>🎓 Alumno Expositor</span>
+                            <small>Equipo de Proyecto ABP</small>
+                        </button>
+                        <button type="button" class="role-tab-btn" data-role="jurado">
+                            <span>🔍 Jurado / Docente</span>
+                            <small>Comité de Evaluación</small>
+                        </button>
+                        <button type="button" class="role-tab-btn" data-role="visitante">
+                            <span>👥 Visitante / Empresa</span>
+                            <small>Público & Sector Productivo</small>
+                        </button>
+                    </div>
+
+                    <!-- Formulario Interactivo -->
+                    <form id="eventRegistrationForm" class="form-grid">
+                        <input type="hidden" id="selectedRoleInput" name="role" value="expositor">
+
+                        <!-- Nombre Completo -->
+                        <div class="form-group">
+                            <label for="inputName" class="form-label">
+                                Nombre y Apellido <span class="req">*</span>
+                            </label>
+                            <input type="text" id="inputName" class="form-input" placeholder="Ej: Juan Pérez" required>
+                        </div>
+
+                        <!-- DNI o Legajo -->
+                        <div class="form-group">
+                            <label for="inputDni" class="form-label">
+                                DNI o N° de Legajo <span class="req">*</span>
+                            </label>
+                            <input type="text" id="inputDni" class="form-input" placeholder="Ej: 42.854.120" required>
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="form-group">
+                            <label for="inputEmail" class="form-label">
+                                Correo Electrónico <span class="req">*</span>
+                            </label>
+                            <input type="email" id="inputEmail" class="form-input" placeholder="nombre@correo.com" required>
+                        </div>
+
+                        <!-- Teléfono / WhatsApp -->
+                        <div class="form-group">
+                            <label for="inputPhone" class="form-label">
+                                Teléfono / WhatsApp
+                            </label>
+                            <input type="tel" id="inputPhone" class="form-input" placeholder="+54 9 387 ...">
+                        </div>
+
+                        <!-- Institución o Cátedra (Dinámico) -->
+                        <div class="form-group full-width">
+                            <label for="inputInstitution" id="labelInstitution" class="form-label">
+                                Cátedra / Especialidad <span class="req">*</span>
+                            </label>
+                            <input type="text" id="inputInstitution" class="form-input" placeholder="Ej: TMA - Taller de Máquinas / Biomedicina EAV" required>
+                        </div>
+
+                        <!-- Título del Proyecto (Para Expositores) -->
+                        <div class="form-group full-width" id="projectGroup">
+                            <label for="inputProject" class="form-label">
+                                Título del Proyecto Integrador ABP <span class="req">*</span>
+                            </label>
+                            <input type="text" id="inputProject" class="form-input" placeholder="Ej: Banco Automatizado de Calibración de Inyectores" required>
+                            <span class="form-hint">Indicá el nombre del prototipo o desarrollo que defenderá tu equipo.</span>
+                        </div>
+
+                        <!-- Área de Interés / Especialidad Principal -->
+                        <div class="form-group">
+                            <label for="selectField" class="form-label">
+                                Área Tecnológica de Interés <span class="req">*</span>
+                            </label>
+                            <select id="selectField" class="form-select" required>
+                                <option value="" disabled selected>Seleccioná una especialidad</option>
+                                <option value="Autotrónica">Autotrónica y Máquinas</option>
+                                <option value="Biomedicina">Biomedicina e Instrumental Médico</option>
+                                <option value="Electrónica">Electrónica e IoT Industrial</option>
+                                <option value="Software">Software e Informática</option>
+                                <option value="General">Todas las anteriores</option>
+                            </select>
+                        </div>
+
+                        <!-- Turno de Asistencia Previsto -->
+                        <div class="form-group">
+                            <label for="selectShift" class="form-label">
+                                Franja Horaria de Asistencia
+                            </label>
+                            <select id="selectShift" class="form-select">
+                                <option value="Jornada Completa">Jornada Completa (08:30 a 18:30)</option>
+                                <option value="Mañana">Turno Mañana (08:30 a 13:00)</option>
+                                <option value="Tarde">Turno Tarde (14:00 a 18:30)</option>
+                            </select>
+                        </div>
+
+                        <!-- Observaciones / Requerimientos de Stand -->
+                        <div class="form-group full-width">
+                            <label for="inputTextarea" class="form-label">
+                                Observaciones / Requerimientos Técnicos (Opcional)
+                            </label>
+                            <textarea id="inputTextarea" class="form-textarea" rows="3" placeholder="Alimentación trifásica 380V, toma de aire comprimido, conexión a red local, etc..."></textarea>
+                        </div>
+
+                        <div class="form-group full-width form-submit-row">
+                            <button type="submit" class="btn-submit">
+                                <span>Confirmar Registro y Generar Credencial</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </button>
+                            <span class="form-hint">La acreditación es libre y gratuita. Se emite certificado de asistencia institucional.</span>
+                        </div>
+                    </form>
+
+                    <!-- Resultado / Credencial Digital Generada -->
+                    <div id="registrationResult" class="registration-result">
+                        <div class="credential-card">
+                            <div class="credential-header">
+                                <div class="brand-text">
+                                    <span class="brand-title">I.E.S. 6036 · U.F.I.De.T.</span>
+                                    <span class="brand-sub">Credencial Oficial de Acreditación</span>
+                                </div>
+                                <span class="credential-badge">Acreditado</span>
+                            </div>
+
+                            <div class="credential-body">
+                                <div class="credential-info">
+                                    <span class="credential-role" id="credRole">Expositor / Alumno ABP</span>
+                                    <h3 class="credential-name" id="credName">Nombre del Participante</h3>
+                                    <p style="color: var(--text-muted); font-size: 0.9rem;" id="credInstitution">Cátedra / Institución</p>
+                                    <div class="credential-code">ID: <span id="credCode">UFIDET-EXP-2026-0000</span></div>
+                                </div>
+                                <div class="credential-qr-box">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=UFIDET2026" 
+                                         alt="QR de Acceso Rápido" 
+                                         class="credential-qr" 
+                                         id="credQrImage">
+                                </div>
+                            </div>
+
+                            <div class="credential-actions">
+                                <button type="button" class="btn-credential-action" id="btnPrintCredential">
+                                    🖨️ Imprimir / Guardar PDF
+                                </button>
+                                <button type="button" class="btn-credential-action" id="btnNewRegistration">
+                                    + Registrar a otra persona
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ==========================================================================
+       MODAL DE DETALLE DE PROYECTO / FICHA TÉCNICA ABP
+       ========================================================================== -->
+    <div id="projectModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar ventana modal">✕</button>
+            <div class="modal-header">
+                <span class="modal-badge" id="modalBadge">Cátedra</span>
+                <h3 class="modal-title" id="modalTitle">Título del Proyecto</h3>
+            </div>
+
+            <div class="modal-section">
+                <h4>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+                    Problema Socioproductivo Abordado
+                </h4>
+                <p id="modalProblem">Descripción del problema</p>
+            </div>
+
+            <div class="modal-section">
+                <h4>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    Prototipo y Desarrollo Físico
+                </h4>
+                <p id="modalPrototypes">Detalle de prototipos</p>
+            </div>
+
+            <div class="modal-section">
+                <h4>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    Mediciones y Metrología de Precisión
+                </h4>
+                <p id="modalMeasurements">Detalle de mediciones</p>
+            </div>
+
+            <div class="modal-section">
+                <h4>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Instrumental y Herramientas Utilizadas
+                </h4>
+                <div class="modal-tech-pills" id="modalEquipment"></div>
+            </div>
+
+            <div class="modal-section">
+                <h4>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Criterios y Rúbrica de Evaluación ABP
+                </h4>
+                <p id="modalRubric" style="font-size: 0.85rem; font-style: italic; color: var(--text-muted);">Criterios de evaluación</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       6. FOOTER INSTITUCIONAL (COHERENCIA WEB3)
+       ========================================================================== -->
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <!-- Columna Institución -->
+            <div class="footer-brand-col">
+                <div class="footer-logo-row">
+                    <img src="logo.png" alt="Logo UFIDeT" class="nav-logo">
+                    <div class="brand-text">
+                        <span class="brand-title">I.E.S. N° 6036</span>
+                        <span class="brand-sub">U.F.I.De.T. Salta</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Unidad de Formación, Investigación y Desarrollo Tecnológico (U.F.I.De.T.). Formando técnicos superiores e ingenieros capaces de transformar el entorno productivo de Salta y la región.
+                </p>
+            </div>
+
+            <!-- Columna Enlaces de la Feria -->
+            <div>
+                <h4 class="footer-col-title">Navegación del Evento</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#hero" class="footer-link">Inicio / Presentación</a></li>
+                    <li><a href="#abp" class="footer-link">Metodología ABP</a></li>
+                    <li><a href="#stands" class="footer-link">Cátedras & Stands Técnicos</a></li>
+                    <li><a href="#cronograma" class="footer-link">Agenda de Actividades</a></li>
+                    <li><a href="#registro" class="footer-link">Acreditación y Registro</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna Contacto Docente e Institucional -->
+            <div>
+                <h4 class="footer-col-title">Contacto Institucional</h4>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Parque Industrial, Salta Capital, Argentina</span>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>Coordinación: <a href="mailto:hugoaguila@ufidet.com.ar">hugoaguila@ufidet.com.ar</a></span>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span>Responsable: Ing. Hugo Aguila</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                &copy; 2026 U.F.I.De.T. Salta - I.E.S. N° 6036 · Todos los derechos reservados.
+            </div>
+            <div>
+                <a href="#hero" class="back-to-top">
+                    <span>Volver arriba</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica Frontend Modular -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
