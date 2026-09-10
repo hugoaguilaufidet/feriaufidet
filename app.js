@@ -3,7 +3,7 @@
  * Hoja: https://docs.google.com/spreadsheets/d/1_3lhS2Dih1qiTZa8vEPcBmGLVFbiyiUhDWEZKdDUSKI/edit
  * Pestañas automáticas: "Expositores", "Jurados", "Visitantes"
  */
-const GOOGLE_SHEETS_SCRIPT_URL = ""; // Pega aquí la URL de la Web App de Apps Script (ej: https://script.google.com/macros/s/.../exec)
+const GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0PgwMkFVphNdca2jJxItAH76Gljas8g6HmhXVU65SsHoNUn_1lNZkrhwDs3uNAI8Kyg/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. NAVEGACIÓN Y ACTIVE TAB EN SCROLL
-   ========================================================================== */
+ *  1. NAVEGACIÓN Y ACTIVE TAB EN SCROLL
+ *  ========================================================================== */
 function initNavigation() {
     const navTabs = document.querySelectorAll('.nav-tab');
     const sections = document.querySelectorAll('section[id], header[id]');
@@ -25,7 +25,7 @@ function initNavigation() {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
@@ -61,8 +61,8 @@ function initNavigation() {
 }
 
 /* ==========================================================================
-   2. FILTROS DE STANDS Y CÁTEDRAS
-   ========================================================================== */
+ *  2. FILTROS DE STANDS Y CÁTEDRAS
+ *  ========================================================================== */
 function initStandsFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const standCards = document.querySelectorAll('.stand-card');
@@ -89,8 +89,8 @@ function initStandsFilter() {
 }
 
 /* ==========================================================================
-   3. MODAL DE FICHAS TÉCNICAS Y PROYECTOS ABP
-   ========================================================================== */
+ *  3. MODAL DE FICHAS TÉCNICAS Y PROYECTOS ABP
+ *  ========================================================================== */
 const projectData = {
     auto: {
         badge: "Cátedra: TMA & Sistemas Vehiculares",
@@ -182,16 +182,16 @@ function initProjectModals() {
         if (e.target === modalOverlay) closeModal();
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-            closeModal();
-        }
-    });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
 }
 
 /* ==========================================================================
-   4. FILTRO DE CRONOGRAMA
-   ========================================================================== */
+ *  4. FILTRO DE CRONOGRAMA
+ *  ========================================================================== */
 function initScheduleFilter() {
     const scheduleButtons = document.querySelectorAll('.schedule-btn');
     const timelineCards = document.querySelectorAll('.timeline-card');
@@ -217,8 +217,8 @@ function initScheduleFilter() {
 }
 
 /* ==========================================================================
-   5. FORMULARIO DE REGISTRO INTERACTIVO Y CREDENCIALES
-   ========================================================================== */
+ *  5. FORMULARIO DE REGISTRO INTERACTIVO Y CREDENCIALES
+ *  ========================================================================== */
 function initRegistrationForm() {
     const roleTabs = document.querySelectorAll('.role-tab-btn');
     const roleHiddenInput = document.getElementById('selectedRoleInput');
@@ -346,7 +346,7 @@ function initRegistrationForm() {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnHtml;
         form.style.display = 'none';
-        resultBox.style.display = 'block';
+                          resultBox.style.display = 'block';
         resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
