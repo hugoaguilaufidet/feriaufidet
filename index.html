@@ -21,6 +21,10 @@
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(3, 7, 18, 0.98) 100%);
             backdrop-filter: blur(12px);
         }
+        /* Cursor llamativo en forma de estrella reluciente para el botón I.E.S. 6036 */
+        .btn-ies-cursor {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="%2360a5fa" stroke="%23ffffff" stroke-width="1.5"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.6h7.6z"/></svg>') 12 12, pointer !important;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
@@ -29,9 +33,11 @@
     <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black px-3.5 py-1.5 rounded-xl text-sm shadow-md tracking-wider">
-                    I.E.S. 6036
-                </div>
+                <!-- Botón Interactivo I.E.S. 6036 con Cursor Llamativo -->
+                <button type="button" onclick="abrirModalIes()" class="btn-ies-cursor bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black px-3.5 py-1.5 rounded-xl text-sm shadow-md hover:shadow-blue-500/50 hover:scale-105 transition-all duration-200 tracking-wider flex items-center gap-1.5 border border-blue-400/30">
+                    <span>I.E.S. 6036</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </button>
                 <span class="text-xs text-slate-400 font-semibold tracking-widest uppercase hidden sm:inline">Feria Tecnológica Anual</span>
             </div>
             <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
@@ -46,7 +52,7 @@
 
     <!-- Contenido Principal -->
     <main class="flex-grow">
-        
+
         <!-- Sección Hero -->
         <section id="inicio" class="py-20 px-4 text-center max-w-5xl mx-auto relative overflow-hidden">
             <div class="absolute inset-0 -z-10 flex items-center justify-center opacity-20 pointer-events-none">
@@ -229,6 +235,95 @@
         </section>
     </main>
 
+    <!-- VENTANA FLOTANTE / MODAL INFORMATIVO INSTITUCIONAL I.E.S. 6036 (UFIDeT) -->
+    <div id="modal-ies-info" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-all duration-300">
+        <div class="bg-slate-900 border border-slate-800 text-slate-100 rounded-3xl max-w-2xl w-full p-6 md:p-8 shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
+            
+            <!-- Botón de Escape / Cierre -->
+            <button type="button" onclick="cerrarModalIes()" class="absolute top-5 right-5 bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border border-slate-700 shadow">
+                <span>✕ Volver a la Feria</span>
+                <span class="bg-slate-900/60 px-1.5 py-0.5 rounded text-[10px] text-slate-400 font-mono">[ESC]</span>
+            </button>
+
+            <!-- Encabezado Modal -->
+            <div class="mb-6 border-b border-slate-800 pb-4 pr-32">
+                <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-2">
+                    Información Institucional
+                </span>
+                <h3 class="text-2xl font-black text-white">I.E.S. N° 6036 — U.F.I.De.T.</h3>
+                <p class="text-xs text-slate-400 mt-1">Unidad Formativa de Investigación en Desarrollo Tecnológico • Salta</p>
+            </div>
+
+            <!-- Oferta Académica Real -->
+            <div class="mb-6 bg-slate-950/60 border border-slate-800 p-4 rounded-2xl">
+                <h4 class="text-sm font-bold text-blue-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <span>🎓</span> Oferta Académica Oficial
+                </h4>
+                <ul class="space-y-3 text-xs md:text-sm text-slate-300">
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+                        <div>
+                            <strong class="text-white block">Tecnicatura Superior en Mantenimiento de Tecnologías Biomédicas</strong>
+                            Orientada al equipamiento médico hospitalario con prácticas profesionalizantes en hospitales públicos y privados.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+                        <div>
+                            <strong class="text-white block">Tecnicatura Superior en Autotrónica</strong>
+                            Diagnóstico electromecánico vehicular con pasantías en empresas del rubro (DYCAR, AUTOSOL, AUTOPARTS, LA VELOZ DEL NORTE, ROLCAR).
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Preinscripciones 2027 -->
+            <div class="mb-6 bg-slate-950/60 border border-slate-800 p-4 rounded-2xl">
+                <h4 class="text-sm font-bold text-indigo-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <span>📅</span> Pre-Inscripciones Ciclo Lectivo 2027
+                </h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+                    <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
+                        <strong class="text-blue-400 block mb-1">1° Período:</strong>
+                        <span>8 al 30 de Diciembre de 2026 (a partir de las 08:00 hs, 200 cupos por Turno).</span>
+                    </div>
+                    <div class="bg-slate-900 p-3 rounded-xl border border-slate-800">
+                        <strong class="text-blue-400 block mb-1">2° Período:</strong>
+                        <span>8 al 19 de Febrero de 2027 (sujeto a disponibilidad de vacantes).</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Requisitos y Cursada -->
+            <div class="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div class="bg-slate-950/60 border border-slate-800 p-4 rounded-2xl">
+                    <h5 class="font-bold text-purple-400 uppercase tracking-wider mb-2">📋 Requisitos de Inscripción</h5>
+                    <ul class="space-y-1.5 text-slate-300">
+                        <li>• Formulario de Inscripción en Línea</li>
+                        <li>• Carta Acuerdo firmada</li>
+                        <li>• Fotocopia de DNI + 2 fotos 4x4</li>
+                        <li>• Título Secundario o Constancia en trámite</li>
+                        <li>• Formulario de Certificado Médico completo</li>
+                        <li>• Pago del seguro escolar</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-950/60 border border-slate-800 p-4 rounded-2xl">
+                    <h5 class="font-bold text-purple-400 uppercase tracking-wider mb-2">🕒 Horarios de Cursada</h5>
+                    <ul class="space-y-1.5 text-slate-300">
+                        <li>• <strong>Turno Mañana:</strong> 08:00 hs a 12:00 hs</li>
+                        <li>• <strong>Turno Tarde:</strong> 14:15 hs a 18:45 hs</li>
+                        <li>• <strong>Turno Vespertino:</strong> 19:00 hs a 23:00 hs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Enlace Oficial -->
+            <a href="http://ufidet.salta.gov.ar/" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3 px-4 rounded-xl text-xs md:text-sm transition shadow-lg shadow-blue-600/30">
+                🌐 Visitar Portal Web Oficial de UFIDeT (ufidet.salta.gov.ar) ↗
+            </a>
+        </div>
+    </div>
+
     <!-- Pie de página -->
     <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500 bg-slate-950">
         I.E.S. N° 6036 • Salta, Argentina © 2026
@@ -238,9 +333,33 @@
     <script>
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0PgwMkFVphNdca2jJxItAH76Gljas8g6HmhXVU65SsHoNUn_1lNZkrhwDs3uNAI8Kyg/exec";
 
+        // Lógica para abrir/cerrar modal I.E.S. 6036
+        function abrirModalIes() {
+            const modal = document.getElementById('modal-ies-info');
+            modal.classList.remove('hidden');
+        }
+
+        function cerrarModalIes() {
+            const modal = document.getElementById('modal-ies-info');
+            modal.classList.add('hidden');
+        }
+
+        // Eventos de Escape (ESC) y Clic fuera del Modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                cerrarModalIes();
+            }
+        });
+
+        document.getElementById('modal-ies-info').addEventListener('click', function(e) {
+            if (e.target === this) {
+                cerrarModalIes();
+            }
+        });
+
         function setRole(role) {
             document.getElementById('role').value = role;
-            
+
             ['Expositor', 'Jurado', 'Visitante'].forEach(r => {
                 const btn = document.getElementById(`btn-${r}`);
                 if (r === role) {
@@ -252,7 +371,7 @@
 
             const containerProject = document.getElementById('container-project');
             const labelInstitution = document.querySelector('#institution').previousElementSibling;
-            
+
             if (role === 'Expositor') {
                 containerProject.style.display = 'block';
                 labelInstitution.textContent = "Cátedra / Especialidad *";
@@ -267,7 +386,7 @@
 
         function enviarDatos(e) {
             e.preventDefault();
-            
+
             const btn = document.getElementById('submit-btn');
             btn.disabled = true;
             btn.textContent = "Procesando credencial...";
@@ -305,14 +424,14 @@
             const btn = document.getElementById('submit-btn');
             btn.disabled = false;
             btn.textContent = "Confirmar Registro y Generar Credencial";
-            
+
             const resultContainer = document.getElementById('result-container');
             resultContainer.classList.remove('hidden');
             resultContainer.scrollIntoView({ behavior: 'smooth' });
-            
+
             const headerBar = document.getElementById('credencial-header-bar');
             const badgeArea = document.getElementById('badge-area');
-            
+
             let colorClaseBarra = "bg-blue-500";
             let colorEstiloBadge = "bg-blue-500/20 text-blue-400 border-blue-500/30";
 
@@ -374,10 +493,10 @@
 
             const qrContainer = document.getElementById("qrcode");
             qrContainer.innerHTML = "";
-            
+
             const qrCanvas = document.createElement('canvas');
             qrContainer.appendChild(qrCanvas);
-            
+
             new QRious({
                 element: qrCanvas,
                 value: vCardData,
@@ -392,6 +511,6 @@
             document.getElementById('registro').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-    
+
 </body>
 </html>
