@@ -8,6 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Librería QRious para códigos QR -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    <!-- Font Awesome CDN para los iconos de redes sociales del pie de página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         body {
             background-color: #07090e;
@@ -25,6 +29,57 @@
         .btn-ies-cursor {
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="%2360a5fa" stroke="%23ffffff" stroke-width="1.5"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.6h7.6z"/></svg>') 12 12, pointer !important;
         }
+
+        /* ============================================================
+           ESTILOS PERSONALIZADOS PARA BOTONES DE REDES SOCIALES
+           ============================================================ */
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .btn-social:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.15);
+        }
+
+        /* Estilos de marca por red social */
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        .btn-facebook {
+            background-color: #1877F2;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        .btn-youtube {
+            background-color: #FF0000;
+        }
+        .btn-x-twitter {
+            background-color: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* 
+           ========================================================================
+           ¿CÓMO AGREGAR UN NUEVO COLOR DE RED SOCIAL? (Paso 1):
+           Si agregas una red social nueva, crea su clase CSS aquí arriba.
+           Ejemplo para TikTok:
+           .btn-tiktok {
+               background-color: #000000;
+           }
+           ========================================================================
+        */
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
@@ -324,9 +379,72 @@
         </div>
     </div>
 
-    <!-- Pie de página -->
-    <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500 bg-slate-950">
-        Coordinacion Biomedicina-I.E.S. N° 6036 • Salta, Argentina © 2026
+    <!-- Pie de página con sección de Redes Sociales agregada -->
+    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 bg-slate-950">
+        
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-4">
+            
+            <p class="text-slate-400 font-semibold tracking-wider uppercase">Nuestras Redes Sociales</p>
+
+            <!-- ========================================================================
+                 SECCIÓN DE BOTONES DE REDES SOCIALES
+                 ======================================================================== -->
+            <div class="flex flex-wrap items-center justify-center gap-3 my-2">
+
+                <!-- BOTÓN INSTAGRAM -->
+                <a href="https://www.instagram.com/coordinacionies6036/" target="_blank" rel="noopener noreferrer" class="btn-social btn-instagram">
+                    <i class="fa-brands fa-instagram text-base"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <!-- BOTÓN FACEBOOK -->
+                <a href="https://facebook.com/TU_PAGINA" target="_blank" rel="noopener noreferrer" class="btn-social btn-facebook">
+                    <i class="fa-brands fa-facebook-f text-base"></i>
+                    <span>Facebook</span>
+                </a>
+
+                <!-- BOTÓN WHATSAPP -->
+                <a href="https://wa.me/5493870000000" target="_blank" rel="noopener noreferrer" class="btn-social btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- BOTÓN YOUTUBE -->
+                <a href="https://youtube.com/c/TU_CANAL" target="_blank" rel="noopener noreferrer" class="btn-social btn-youtube">
+                    <i class="fa-brands fa-youtube text-base"></i>
+                    <span>YouTube</span>
+                </a>
+
+                <!-- BOTÓN X / TWITTER -->
+                <a href="https://x.com/TU_USUARIO" target="_blank" rel="noopener noreferrer" class="btn-social btn-x-twitter">
+                    <i class="fa-brands fa-x-twitter text-base"></i>
+                    <span>X</span>
+                </a>
+
+                <!-- 
+                  ========================================================================
+                  INSTRUCCIONES PARA AGREGAR MÁS BOTONES (Paso 2):
+                  
+                  Copia el siguiente bloque y pégalo justo aquí abajo.
+                  1. Cambia el 'href' por la URL de tu red social.
+                  2. Cambia la clase del color (ejemplo: 'btn-tiktok', 'btn-facebook').
+                  3. Busca el icono en https://fontawesome.com/icons y cambia 'fa-brands fa-...'.
+                  4. Cambia el texto dentro del <span>.
+
+                  PLANTILLA PARA COPIAR Y PEGAR:
+                  
+                  <a href="https://ENLACE_AQUI" target="_blank" rel="noopener noreferrer" class="btn-social btn-instagram">
+                      <i class="fa-brands fa-NOMBRE_DEL_ICONO text-base"></i>
+                      <span>NOMBRE RED</span>
+                  </a>
+                  ========================================================================
+                -->
+
+            </div>
+
+            <p class="mt-2">Coordinacion-I.E.S. N° 6036 • Salta, Argentina © 2026</p>
+        </div>
+
     </footer>
 
     <!-- Script de Lógica Frontend -->
@@ -506,11 +624,10 @@
         }
 
         function nuevoRegistro() {
-            document.getElementById('result-container').classList.add('hidden');
             document.getElementById('registrationForm').reset();
-            document.getElementById('registro').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('result-container').classList.add('hidden');
+            window.scrollTo({ top: document.getElementById('registro').offsetTop - 80, behavior: 'smooth' });
         }
     </script>
-
 </body>
 </html>
