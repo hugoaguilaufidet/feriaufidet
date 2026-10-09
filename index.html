@@ -277,7 +277,7 @@
                 <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">
                     Horarios organizados para acreditaciones, apertura institucional, charlas, talleres prácticos y demostraciones técnicas en vivo.
                 </p>
-                
+
                 <!-- Selector de Día -->
                 <div class="flex justify-center gap-2 mt-4 bg-slate-950/80 p-1.5 rounded-2xl border border-slate-800 max-w-md mx-auto">
                     <button type="button" id="btn-dia1" onclick="seleccionarDia(1)" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold transition bg-blue-600 text-white shadow">
@@ -291,7 +291,7 @@
 
             <!-- CONTENIDO DÍA 1 (Jueves 29 de Octubre) -->
             <div id="cronograma-dia1" class="space-y-6 relative before:absolute before:inset-0 before:left-[19px] before:w-0.5 before:bg-slate-800">
-                
+
                 <!-- 09:00 - Acreditación -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
@@ -401,7 +401,7 @@
 
             <!-- CONTENIDO DÍA 2 (Viernes 30 de Octubre) -->
             <div id="cronograma-dia2" class="space-y-6 relative before:absolute before:inset-0 before:left-[19px] before:w-0.5 before:bg-slate-800 hidden">
-                
+
                 <!-- 09:00 - Demostración a visitantes -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
@@ -584,9 +584,6 @@
                 slideDiv.className = `carousel-item absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100' : 'opacity-0'} flex items-center justify-center`;
                 slideDiv.innerHTML = `
                     <img src="${imgName}" alt="Muestra Institucional - ${imgName}" class="w-full h-full object-contain" style="image-rendering: -webkit-optimize-contrast;">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
-                        <span class="bg-blue-600/85 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-lg">Muestra Institucional • ${imgName} (${index + 1} de ${imageFiles.length})</span>
-                    </div>
                 `;
                 track.appendChild(slideDiv);
 
