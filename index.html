@@ -60,21 +60,26 @@
     <!-- Barra de Navegación Superior -->
     <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <button type="button" onclick="abrirModalIes()" class="btn-ies-cursor bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black px-3.5 py-1.5 rounded-xl text-sm shadow-md hover:shadow-blue-500/50 hover:scale-105 transition-all duration-200 tracking-wider flex items-center gap-1.5 border border-blue-400/30">
+            <div class="flex items-center space-x-3 overflow-x-auto py-1">
+                <button type="button" onclick="abrirModalIes()" class="btn-ies-cursor bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black px-3.5 py-1.5 rounded-xl text-sm shadow-md hover:shadow-blue-500/50 hover:scale-105 transition-all duration-200 tracking-wider flex items-center gap-1.5 border border-blue-400/30 whitespace-nowrap">
                     <span>I.E.S. 6036</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </button>
-                <button type="button" onclick="abrirModalCronograma()" class="bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 hover:border-blue-500/50 px-3 py-1.5 rounded-xl text-xs font-semibold tracking-wide transition-all duration-200 flex items-center gap-2 shadow-sm">
+                <button type="button" onclick="abrirModalCronograma()" class="bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 hover:border-blue-500/50 px-3 py-1.5 rounded-xl text-xs font-semibold tracking-wide transition-all duration-200 flex items-center gap-2 shadow-sm whitespace-nowrap">
                     <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                     <span>Cronograma y agenda de las jornadas</span>
+                </button>
+                <!-- BOTÓN EMPRESAS COLABORADORAS -->
+                <button type="button" onclick="abrirModalEmpresas()" class="bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 hover:border-emerald-500/50 px-3 py-1.5 rounded-xl text-xs font-semibold tracking-wide transition-all duration-200 flex items-center gap-2 shadow-sm whitespace-nowrap">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Empresas Colaboradoras</span>
                 </button>
             </div>
             <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
                 <a href="#inicio" class="hover:text-blue-400 transition">Inicio</a>
                 <a href="#registro" class="text-blue-400 font-semibold transition">Acreditación</a>
             </nav>
-            <a href="#registro" class="bg-blue-600 hover:bg-blue-500 text-white text-xs md:text-sm font-semibold px-4 py-2 rounded-xl transition shadow-lg shadow-blue-600/20">
+            <a href="#registro" class="bg-blue-600 hover:bg-blue-500 text-white text-xs md:text-sm font-semibold px-4 py-2 rounded-xl transition shadow-lg shadow-blue-600/20 whitespace-nowrap ml-2">
                 Inscribirse
             </a>
         </div>
@@ -264,6 +269,88 @@
         </section>
     </main>
 
+    <!-- VENTANA FLOTANTE / MODAL EMPRESAS COLABORADORAS -->
+    <div id="modal-empresas" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-all duration-300">
+        <div class="bg-slate-900 border border-slate-800 text-slate-100 rounded-3xl max-w-3xl w-full p-6 md:p-8 shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
+            <button type="button" onclick="cerrarModalEmpresas()" class="absolute top-5 right-5 bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border border-slate-700 shadow z-10">
+                <span>✕ Volver a la Principal</span>
+                <span class="bg-slate-900/60 px-1.5 py-0.5 rounded text-[10px] text-slate-400 font-mono">[ESC]</span>
+            </button>
+
+            <div class="text-center mb-8 pr-12 sm:pr-0">
+                <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-2">Alianzas Estratégicas</span>
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">Empresas Colaboradoras</h2>
+                <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">
+                    Agradecemos profundamente el apoyo, patrocinio y colaboración de las instituciones y empresas del sector industrial, médico y tecnológico que hacen posible esta edición.
+                </p>
+            </div>
+
+            <!-- TARJETAS DE EMPRESAS COLABORADORAS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Empresa 1: Con Web Oficial y PDF de Google Drive -->
+                <div class="bg-slate-950/70 border border-slate-800 p-5 rounded-2xl flex flex-col justify-between hover:border-emerald-500/50 transition duration-200">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                                Sponsor Oficial
+                            </span>
+                            <span class="text-xs text-slate-500 font-semibold">Equipamiento y Tecnología</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Clinitec / MKS</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Líderes en soluciones tecnológicas e insumos especializados. Visita su web oficial o consulta su catálogo de productos completo.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <!-- Botón a la web oficial -->
+                        <a href="https://www.clinitecsrl.com/index.html" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-blue-400 hover:text-blue-300 bg-blue-950/40 border border-blue-800/40 py-2 px-3 rounded-xl transition">
+                            <span>🌐 Visitar Página Web Oficial</span> ↗
+                        </a>
+                        <!-- Botón al catálogo en Google Drive -->
+                        <a href="https://drive.google.com/file/d/1fxBYKJ8lE_s1k_m4gzktpXnOetBRn08X/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 bg-emerald-950/40 border border-emerald-800/40 py-2 px-3 rounded-xl transition">
+                            <span>📄 Ver Catálogo de Productos (PDF)</span> ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Empresa 2: Plantilla lista para duplicar y agregar más adelante -->
+                <div class="bg-slate-950/70 border border-slate-800 p-5 rounded-2xl flex flex-col justify-between hover:border-emerald-500/50 transition duration-200">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                                Colaborador Técnico
+                            </span>
+                            <span class="text-xs text-slate-500 font-semibold">Automatización</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">[Promocioná tu Empresa]</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Espacio reservado para una nueva empresa asociada. Duplica este bloque cuando sumes otro sponsor.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-blue-400 hover:text-blue-300 bg-blue-950/40 border border-blue-800/40 py-2 px-3 rounded-xl transition">
+                            <span>🌐 Visitar Página Web Oficial</span> ↗
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 bg-emerald-950/40 border border-emerald-800/40 py-2 px-3 rounded-xl transition">
+                            <span>📄 Ver Catálogo de Productos (PDF)</span> ↗
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mención de Agradecimiento Final -->
+            <div class="mt-6 p-4 rounded-2xl bg-slate-950/90 border border-slate-800 text-center">
+                <p class="text-xs text-slate-400">
+                    ¿Tu empresa desea colaborar o patrocinar futuras ediciones de la Feria Tecnológica? <br>
+                    <span class="text-slate-200 font-semibold">Contáctanos al correo institucional:</span> <a href="mailto:coordinacionies6036@gmail.com" class="text-blue-400 underline">coordinacionies6036@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- VENTANA FLOTANTE / MODAL CRONOGRAMA CON CHARLAS Y TALLERES INCORPORADOS -->
     <div id="modal-cronograma" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-all duration-300">
         <div class="bg-slate-900 border border-slate-800 text-slate-100 rounded-3xl max-w-3xl w-full p-6 md:p-8 shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
@@ -334,7 +421,7 @@
                     </div>
                 </div>
 
-                <!-- NUEVO ITEM: 11:30 - Demostracion a Visitantes -->
+                <!-- 11:30 - Demostracion a Visitantes -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
                         <span class="text-xs font-black text-white block">11:30</span>
@@ -350,13 +437,12 @@
                         </div>
                         <h4 class="text-base font-bold text-white mb-1">Demostración de Proyectos ABP</h4>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                         Demostración a visitantes, público en general e invitados del sector productivo y hospitalario.   
+                         Demostración a visitantes, público en general e invitados del sector productivo y hospitalario.
                         </p>
                     </div>
                 </div>
 
-                
-                <!-- NUEVO ITEM: 11:30 - Taller Práctico -->
+                <!-- 11:30 - Taller Práctico -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
                         <span class="text-xs font-black text-white block">11:30</span>
@@ -372,12 +458,12 @@
                         </div>
                         <h4 class="text-base font-bold text-white mb-1">Energías Renovables: ¿Cómo instalar un panel solar?</h4>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                         El Esp. Ing. Mauricio Rojas brindará una charla sobre Energías Renovables y se enfocará en la Energía Solar Fotovoltaica. Aprenderemos sobre el recurso solar disponible y el funcionamiento de los distintos elementos que conforman un sistema Solar fotovoltaico Off Grid y On Grid/TIE. Estos conocimientos serán introductorios para la práctica a realizar en horario de la tarde. 
+                         El Esp. Ing. Mauricio Rojas brindará una charla sobre Energías Renovables y se enfocará en la Energía Solar Fotovoltaica. Aprenderemos sobre el recurso solar disponible y el funcionamiento de los distintos elementos que conforman un sistema Solar fotovoltaico Off Grid y On Grid/TIE. Estos conocimientos serán introductorios para la práctica a realizar en horario de la tarde.
                         </p>
                     </div>
                 </div>
 
-               <!-- NUEVO ITEM: 12:30 - Taller Práctico -->
+               <!-- 12:30 - Taller Práctico -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
                         <span class="text-xs font-black text-white block">12:30</span>
@@ -398,7 +484,6 @@
                         </p>
                     </div>
                 </div>
-
 
                 <!-- 15:00 - Charla Interactiva -->
                 <div class="flex items-start gap-4 relative">
@@ -421,7 +506,7 @@
                     </div>
                 </div>
 
-                <!-- NUEVO ITEM: 16:00 - Charla Magistral -->
+                <!-- 16:00 - Charla Magistral -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
                         <span class="text-xs font-black text-white block">16:00</span>
@@ -441,7 +526,8 @@
                         </p>
                     </div>
                 </div>
-                <!-- NUEVO ITEM: 18:00 - Despedida al dia de hoy-->
+
+                <!-- 18:00 - Despedida al dia de hoy-->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
                         <span class="text-xs font-black text-white block">18:00</span>
@@ -461,10 +547,6 @@
                         </p>
                     </div>
                 </div>
-
-
-
-
 
             </div>
 
@@ -492,7 +574,7 @@
                     </div>
                 </div>
 
-                <!-- NUEVO ITEM: 9:00 - Espacio Intercolegial de Muestra de Proyectos y Tecnologia -->
+                <!-- 9:00 - Espacio Intercolegial de Muestra de Proyectos y Tecnologia -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
                         <span class="text-xs font-black text-white block">9:00</span>
@@ -513,7 +595,7 @@
                     </div>
                 </div>
 
-                <!-- NUEVO ITEM: 11:30 - Taller Práctico -->
+                <!-- 11:30 - Taller Práctico -->
                 <div class="flex items-start gap-4 relative">
                     <div class="flex-shrink-0 w-10 text-right">
                         <span class="text-xs font-black text-white block">11:30</span>
@@ -529,11 +611,10 @@
                         </div>
                         <h4 class="text-base font-bold text-white mb-1">Energías Renovables: ¿Cómo instalar un panel solar?</h4>
                         <p class="text-xs text-slate-400 leading-relaxed">
-                         El Esp. Ing. Mauricio Rojas brindará una charla sobre Energías Renovables y se enfocará en la Energía Solar Fotovoltaica. Aprenderemos sobre el recurso solar disponible y el funcionamiento de los distintos elementos que conforman un sistema Solar fotovoltaico Off Grid y On Grid/TIE. Estos conocimientos serán introductorios para la práctica a realizar en horario de la tarde. 
+                         El Esp. Ing. Mauricio Rojas brindará una charla sobre Energías Renovables y se enfocará en la Energía Solar Fotovoltaica. Aprenderemos sobre el recurso solar disponible y el funcionamiento de los distintos elementos que conforman un sistema Solar fotovoltaico Off Grid y On Grid/TIE. Estos conocimientos serán introductorios para la práctica a realizar en horario de la tarde.
                         </p>
                     </div>
                 </div>
-
 
                 <!-- 16:00 - Conferencia -->
                 <div class="flex items-start gap-4 relative">
@@ -740,10 +821,15 @@
             iniciarCarrusel();
         });
 
+        /* FUNCIONES DE MODALES */
         function abrirModalIes() { document.getElementById('modal-ies-info').classList.remove('hidden'); }
         function cerrarModalIes() { document.getElementById('modal-ies-info').classList.add('hidden'); }
+        
         function abrirModalCronograma() { document.getElementById('modal-cronograma').classList.remove('hidden'); }
         function cerrarModalCronograma() { document.getElementById('modal-cronograma').classList.add('hidden'); }
+
+        function abrirModalEmpresas() { document.getElementById('modal-empresas').classList.remove('hidden'); }
+        function cerrarModalEmpresas() { document.getElementById('modal-empresas').classList.add('hidden'); }
 
         function seleccionarDia(numDia) {
             const btn1 = document.getElementById('btn-dia1');
@@ -764,15 +850,19 @@
             }
         }
 
+        /* CIERRE DE MODALES CON TECLA ESC */
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 cerrarModalIes();
                 cerrarModalCronograma();
+                cerrarModalEmpresas();
             }
         });
 
+        /* CIERRE DE MODALES HACIENDO CLIC FUERA */
         document.getElementById('modal-ies-info').addEventListener('click', function(e) { if (e.target === this) cerrarModalIes(); });
         document.getElementById('modal-cronograma').addEventListener('click', function(e) { if (e.target === this) cerrarModalCronograma(); });
+        document.getElementById('modal-empresas').addEventListener('click', function(e) { if (e.target === this) cerrarModalEmpresas(); });
 
         function setRole(role) {
             document.getElementById('role').value = role;
